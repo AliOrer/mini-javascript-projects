@@ -26,5 +26,10 @@ for (let i=0; i< priceInputValue.length; i++){
             priceInputValue[1].value = 10000;
             maxp = 10000;
         }
+
+        if(minp > maxp - priceGap){
+            priceInputValue[0].value = maxp - priceGap;
+            minp = maxp - priceGap;
+        }
     })
 }
