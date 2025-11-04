@@ -30,6 +30,16 @@ for (let i=0; i< priceInputValue.length; i++){
         if(minp > maxp - priceGap){
             priceInputValue[0].value = maxp - priceGap;
             minp = maxp - priceGap;
+
+            if(minp < 0){
+                priceInputValue[0].value = 0;
+                minp = 0;
+            }
+        }
+        //check if the price gap is met and max price is wthin the range
+
+        if (diff >= priceGap && maxp <= rangeInputValue[1].max){
+            
         }
     })
 }
